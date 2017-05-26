@@ -1,0 +1,17 @@
+<style type="text/css">
+        .well-block {
+    background-color: #fff;
+    border: 1px solid #e9e6e8;
+    padding: 40px;
+}
+
+.well-title {
+    margin-bottom: 40px;
+}
+
+.send-btn{ background:#00b09c; border-color:#00b09c; color:#fff;}
+.send-btn:hover{ background:#00a491;color:#fff;}
+
+
+
+</style>

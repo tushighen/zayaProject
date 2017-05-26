@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/headerinc :: foot"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+
+
+    <div th:if="${not #lists.isEmpty(home)}">
+    </div> <!-- end of if -->
+
+     <div  class="container-fluid"> 
+           <div class="row">
+
+                <img style="height: 100vh; width: 100%;" src="../../static/images/cover.png" th:src="@{/images/cover.png}"/>
+                <input class="form-control mr-sm-2" type="text" placeholder="search" style="background-color: #e5e8e5"></input>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: #ccc">Search </button>
+            
+           </div>
+
+        </div>
+
+</div> <!-- end of container -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footerinc :: foot"></th:block> /*/-->
+</head>
+<body>
+
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+<!-- 
+        <div  class="container-fluid"> 
+           <div class="row">
+
+                <img style="height:50%" src="../../static/images/cover.png" th:src="@{/images/cover.png}"/>
+            
+           </div>
+
+        </div> -->
+
+<div class="container">
+    <h1 style="margin-bottom: 30px"> Our Top Products </h1>
+    <div th:if="${not #lists.isEmpty(products)}">
+    <div class="row">
+<!--         <div style="background:#337ab7; height:100px; margin-bottom: 50px"> </div>
+ -->
+        <div th:each="prod : ${products}" class="col-md-3" style="padding:20 0">
+            <img th:src="@{/encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQgK_1yw7MtYwpiYYUNRe6YB0yink53QDCI-Zogj248U7j7HggBsg}" class="media-photo" style="width: 100; height: 100" ></img>
+            <p class="form-control-static" th:text="${prod.title}"> </p>
+            <p class="products-price" th:text="${prod.price}"></p>
+            <p class="products-size" th:text="${prod.size}"></p>
+            <p class="products-size" th:text="${prod.description}"></p>
+            <a th:href="${'/product/edit/' + prod.id}"> <p style="background-color: blue"> Edit </p> </a>
+            <a th:href="${'/product/' + prod.id}"> <p style="background-color: red"> Details </p> </a>
+            </div>
+        
+    </div> <!-- end of row -->
+    </div>
+
+    <div class="row text-center">
+        <div style="background:#337ab7; height:100px; margin-top: 50px">
+            <h2>Our Contacts</h2>
+            <h5>Email: aab@gmail.com</h5>
+            <h5>Telephone: +976-77778888</h5>
+
+        </div>
+    </div> <!-- end of if -->
+
+</div> <!-- end of container -->
+
+</body>
+</html>

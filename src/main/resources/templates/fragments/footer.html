@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.4/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/main.css"
+          th:href="@{css/main.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div th:fragment="footer">
+
+		<nav class="navbar navbar-static-top" data-spy="affix" data-offset-top="300" style="background:#0aea11;margin-bottom:0">
+	        <div class="container">
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                
+	                <!-- <ul class="navbar-nav nav navbar">
+	                    <li><a href="#" th:href="@{/home}"> Home </a></li>
+	                    <li><a href="#" th:href="@{/products}"> Product List </a></li>
+                        <li><a href="#" th:href="@{/product/new}"> Create </a></li>
+	                </ul> -->
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container -->
+	    </nav>
+
+
+			
+        
+    </div>
+</div>
+</body>
+</html>

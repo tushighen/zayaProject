@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footerinc :: foot"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <!--/*/ <th:block th:include="fragments/footer :: footer"></th:block> /*/-->
+    <div class="row">
+       <div style="background:#337ab7; height:100px; margin-bottom: 50px"> </div>
+    </div>
+    <h2>Details</h2>
+    	<div class="row">
+    	    	<div class="col-sm-6">
+            <img th:style="${'border-style: solid'}" th:src="${myproduct.img}" style="width:200;height:200; padding: 0 0"/>
+       	</div>
+        <div class="col-sm-6">
+  
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"> Title: </label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${myproduct.title}"> </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"> Price: </label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${myproduct.price}"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"> Size: </label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${myproduct.size}"> </p>
+                    </div>
+                </div>
+            </form>
+
+    	</div>	
+    	</div>
+
+        <div class="row">
+            <div style="background: #337ab7; height:100px; margin-top: 50px"> </div>
+        </div>
+</div> <!-- container -->
+</body>
+</html>
